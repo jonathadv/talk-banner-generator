@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 1;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#ffffff;
+    background-attachment: fixed;
+    background-size: 100% auto;
+    font-family: Calibri, "Trebuchet MS", Helvetica, sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 1920px;
+    height: 1080px;
+    overflow: auto;
+    padding: 30px 20px 20px 20px;
+    margin: 50px auto 0 auto;
+}
+.control {
+    padding: 30px 20px 20px 20px;
+}
+.event-header {
+    background-color: rgba(0, 0, 0, 0);
+    float: left;
+    clear: none;
+    height: 150px;
+    width: 100%;
+}
+.event-content {
+    background-color: rgba(0, 0, 0, 0);
+    float: left;
+    clear: none;
+    flex-grow: 1;
+    width: 100%;
+    padding-bottom: 30px
+}
+.page-footer {
+    background-color: rgba(0, 0, 0, 0);
+    float: left;
+    clear: none;
+    height: 200px;
+    width: 100%;
+}
+.event-title {
+    font-size: 6rem;
+    text-align: center;
+    padding-bottom: 30px
+}
+.event-description {
+    font-size: 3rem;
+    text-align: justify;
+}
+.speaker-picture {
+    border: solid;
+    border-color: #656176;
+    max-height: 200px;
+    max-width: 150px;
+}
+.speaker-bio {
+    font-size: 2rem;
+    display: inline-block;
+    text-align: justify;
+    padding-left: 10px;
+}
+.speaker {
+    display: flex;
+    padding: 10px;
+}
+.speaker-list {
+    display: flex;
+    margin: 0px -10px;
+    padding-top: 10px
+}
+.line {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+.hidden {
+  display:none;
+}
