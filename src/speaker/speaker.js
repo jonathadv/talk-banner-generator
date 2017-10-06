@@ -45,7 +45,7 @@ export class Speaker extends Component {
         <input id={this.state.uploadId} style={{'display':'none'}} type="file" onChange={this.uploadImg.bind(this)}/>
         <img className="speaker-picture" src={this.state.picture} onClick={this.click.bind(this)}/>
         <div className="speaker-bio">
-            {this.state.bio}
+            {this.props.bio ? this.props.bio : this.state.bio}
         </div>
       </div>
     );
