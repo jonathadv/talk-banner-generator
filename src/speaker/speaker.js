@@ -11,7 +11,7 @@ export class Speaker extends Component {
     return (
       <div className="speaker">
         <img className="speaker-picture" src={this.props.picture ? this.props.picture : this.defaultPic}/>
-        <div class="speaker-bio">
+        <div className="speaker-bio">
             {this.props.bio ? this.props.bio : this.defaultBio}
         </div>
       </div>

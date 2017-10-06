@@ -1,38 +1,40 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
-import { withKnobs, text } from '@storybook/addon-knobs';
+//import { action } from '@storybook/addon-actions';
+//import { linkTo } from '@storybook/addon-links';
+import { withKnobs, text, number } from '@storybook/addon-knobs';
 
-import { Speaker }  from '../speaker/speaker';
-import { SpeakerList }  from '../speaker/speaker-list';
-import { EventTitle }  from '../event/event-title';
-import { EventContent }  from '../event/event-content';
-import { Event }  from '../event/event';
-import { Control }  from '../control/control';
 import { Generator }  from '../generator/generator';
+import { setOptions } from '@storybook/addon-options';
+setOptions({ downPanelInRight: true, showLeftPanel: false });
 
 
 
 storiesOf('Talk Banner', module)
   .addDecorator(withKnobs)
-  .add('Speaker Bio', () => <Speaker picture="" bio={text("bio", "")}></Speaker>)
-  .add('Speaker Bio List', () => {return (<SpeakerList>
-                                            <Speaker picture="" bio=""></Speaker>
-                                            <Speaker picture="" bio=""></Speaker>
-                                          </SpeakerList>)})
-  .add('EventTitle', () => <EventTitle/>)
-  .add('EventContent', () => <EventContent/>)
-  .add('Event Banner', () => { return (<Event>
-                                         <Speaker picture="" bio=""></Speaker>
-                                         <Speaker picture="" bio=""></Speaker>
-                                       </Event>)})
-  .add('Control Panel', () => <Control/>)
   .add('Banner Generator', () => {
-        const title = text("Title", null);
+        const title = text("Talk Title", "");;
+        const description = text("Talk Descr", "");
+        const options = {
+           range: true,
+           min: 1,
+           max: 3,
+           step: 1,
+        };
+        const speakerNumber = number("Number of Speakers", 1, options);
+        const speakersList = [];
+        for(var i = 1; i <= speakerNumber; i++){
+            const key = "Speaker " + i;
+            const name = text(`${key}   Name`, "");
+            const bio = text(`${key}  Bio`, "");
+            const picture = text(`${key}  Picture`, "");
 
-        return (<Generator title={title}/>);
+            speakersList.push({name: name, bio: bio })
+        }
+        return (<Generator title={title} 
+                           description={description} 
+                           speakers={speakersList} />);
    });
 
 

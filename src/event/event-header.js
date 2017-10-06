@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { EventTitle }  from '../event/event-title';
 
-import '../css/layout.css';
+import { EventTitle }  from '../event/event-title';
 
 export class EventHeader extends Component {
   render() {
