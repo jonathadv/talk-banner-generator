@@ -3,14 +3,15 @@ import React, { Component } from 'react';
 export class EventContent extends Component {
     constructor(props) {
         super(props);
-        this.defaultDescription = 'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.';
-
+        this.state = {
+            description: 'Lorem Ipsum is a filler text or greeking commonly used to demonstrate the textual elements of a graphic document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.'
+        }
     } 
   render() {
     return (
       <div className="event-content">
         <p className="event-description">
-            {this.props.description ? this.props.description : this.defaultDescription}
+            {this.props.description ? this.props.description : this.state.description}
         </p>
       </div>
     );

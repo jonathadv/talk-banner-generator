@@ -1,14 +1,13 @@
 import React from 'react';
-
-import { storiesOf } from '@storybook/react';
 //import { action } from '@storybook/addon-actions';
 //import { linkTo } from '@storybook/addon-links';
-import { withKnobs, text, number } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+import { withKnobs, text, number, boolean } from '@storybook/addon-knobs';
+import { setOptions } from '@storybook/addon-options';
 
 import { Generator }  from '../generator/generator';
-import { setOptions } from '@storybook/addon-options';
-setOptions({ downPanelInRight: true, showLeftPanel: false });
 
+setOptions({ downPanelInRight: true, showLeftPanel: false });
 
 
 storiesOf('Talk Banner', module)
@@ -26,9 +25,8 @@ storiesOf('Talk Banner', module)
         const speakersList = [];
         for(var i = 1; i <= speakerNumber; i++){
             const key = "Speaker " + i;
-            const name = text(`${key}   Name`, "");
+//          const name = text(`${key}   Name`, "");
             const bio = text(`${key}  Bio`, "");
-            const picture = text(`${key}  Picture`, "");
 
             speakersList.push({name: name, bio: bio })
         }

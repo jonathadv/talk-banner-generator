@@ -17,15 +17,17 @@ export class Control extends Component {
                   background:'#ffffff',
                   width: 1920,
                   height: 1080
-            }); 
+            });
         }
-    } 
+    }
 
     render() {
         return (
             <div>
                 <div className="control">
-                    <button onClick={this.generateImage}>View Image</button>                
+                <p className="center">
+                    <button className="myButton" onClick={this.generateImage}>Generate Image</button>
+                </p>
                 </div>
                 {this.props.children}
             </div>
