@@ -14,7 +14,11 @@ storiesOf('Talk Banner', module)
   .addDecorator(withKnobs)
   .add('Banner Generator', () => {
         const title = text("Talk Title", "");;
-        const description = text("Talk Descr", "");
+        const titleColor = color('Title Color', '#000000');
+
+        const description = text("Talk Desc", "");
+        const descriptionColor = color('Desc Color', '#000000');
+        
         const backgroundColor = color('Bg Color', '#ffffff');
         const options = {
            range: true,
@@ -26,14 +30,14 @@ storiesOf('Talk Banner', module)
         const speakersList = [];
         for(var i = 1; i <= speakerNumber; i++){
             const key = "Speaker " + i;
-//          const name = text(`${key}   Name`, "");
             const bio = text(`${key}  Bio`, "");
 
-            console.log('###: ', backgroundColor)
             speakersList.push({name: name, bio: bio })
         }
-        return (<Generator title={title} 
+        return (<Generator title={title}
+                           titleColor={titleColor}
                            description={description} 
+                           descriptionColor={descriptionColor}
                            speakers={speakersList} 
                            bgColor={backgroundColor}/>);
    });

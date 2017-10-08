@@ -8,7 +8,7 @@ export class EventTitle extends Component {
     } 
   render() {
     return (
-        <p className="event-title">
+        <p className="event-title" style={{"color" : this.props.color}}>
             {this.props.value ? this.props.value : this.state.title}
         </p>
     );

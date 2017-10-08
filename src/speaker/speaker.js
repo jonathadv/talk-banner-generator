@@ -14,7 +14,7 @@ export class Speaker extends Component {
     return (
       <div className="speaker">
         <ImageUpload/>
-        <div className="speaker-bio">
+        <div className="speaker-bio" style={{"color" : this.props.bioColor}}>
             {this.props.bio ? this.props.bio : this.state.bio}
         </div>
       </div>

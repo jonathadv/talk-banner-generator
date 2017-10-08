@@ -14,15 +14,20 @@ export class Generator extends Component {
             speakers = this.props.speakers.map(
                     (s) => <Speaker id={s.name} picture={s.picture} bio={s.bio}></Speaker>
                     )
-            return (<div>{speakers}</div>);
+            return (<div style={{"color": this.props.descriptionColor}}>{speakers}</div>);
         }
-    } 
+    }
 
     render() {
         return (
             <div>
                 <Control print="talk">
-                    <Event bgColor={this.props.bgColor} name="talk" title={this.props.title} description={this.props.description}>
+                    <Event name="talk"
+                           bgColor={this.props.bgColor}
+                           title={this.props.title}
+                           titleColor={this.props.titleColor}
+                           description={this.props.description}
+                           descriptionColor={this.props.descriptionColor}>
                         {this.getSpeakers()}
                     </Event>
                </Control>

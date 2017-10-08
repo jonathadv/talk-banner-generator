@@ -10,7 +10,7 @@ export class EventContent extends Component {
   render() {
     return (
       <div className="event-content">
-        <p className="event-description">
+        <p className="event-description" style={{"color" : this.props.color}}>
             {this.props.description ? this.props.description : this.state.description}
         </p>
       </div>

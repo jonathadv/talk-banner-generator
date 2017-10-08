@@ -14,12 +14,12 @@ export class Event extends Component {
             <div className="background">
                 <ImageUpload className="background-image-upload" picture="none"/>
             </div>
-            
+
             <div className="container">
-                <EventHeader title={this.props.title}/>
-                <EventContent description={this.props.description}/>
+                <EventHeader title={this.props.title} color={this.props.titleColor}/>
+                <EventContent description={this.props.description} color={this.props.descriptionColor}/>
                 <hr className="line"/>
-                <SpeakerList>{this.props.children}</SpeakerList>
+                <SpeakerList style={{"color": this.props.descriptionColor}}> {this.props.children} </SpeakerList>
             </div>
         </div>
     );

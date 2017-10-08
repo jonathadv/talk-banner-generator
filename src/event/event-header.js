@@ -6,7 +6,7 @@ export class EventHeader extends Component {
   render() {
     return (
         <div className="event-header">
-            <EventTitle value={this.props.title}/>
+            <EventTitle value={this.props.title} color={this.props.color}/>
         </div>
     );
   }
