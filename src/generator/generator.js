@@ -22,7 +22,7 @@ export class Generator extends Component {
         return (
             <div>
                 <Control print="talk">
-                    <Event name="talk" title={this.props.title} description={this.props.description}>
+                    <Event bgColor={this.props.bgColor} name="talk" title={this.props.title} description={this.props.description}>
                         {this.getSpeakers()}
                     </Event>
                </Control>

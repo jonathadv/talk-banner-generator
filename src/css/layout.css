@@ -134,6 +134,14 @@ body {
     position: relative;
     top: 0;
     left: 0;
-    z-index: -10000;
+    z-index: -100;
+}
+.background-color {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -50;
+    width: 1920px;
+    height: 1080px;
 
 }

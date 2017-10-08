@@ -2,7 +2,7 @@ import React from 'react';
 //import { action } from '@storybook/addon-actions';
 //import { linkTo } from '@storybook/addon-links';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, number, boolean } from '@storybook/addon-knobs';
+import { withKnobs, text, number, boolean, color } from '@storybook/addon-knobs';
 import { setOptions } from '@storybook/addon-options';
 
 import { Generator }  from '../generator/generator';
@@ -15,6 +15,7 @@ storiesOf('Talk Banner', module)
   .add('Banner Generator', () => {
         const title = text("Talk Title", "");;
         const description = text("Talk Descr", "");
+        const backgroundColor = color('Bg Color', '#ffffff');
         const options = {
            range: true,
            min: 1,
@@ -28,11 +29,13 @@ storiesOf('Talk Banner', module)
 //          const name = text(`${key}   Name`, "");
             const bio = text(`${key}  Bio`, "");
 
+            console.log('###: ', backgroundColor)
             speakersList.push({name: name, bio: bio })
         }
         return (<Generator title={title} 
                            description={description} 
-                           speakers={speakersList} />);
+                           speakers={speakersList} 
+                           bgColor={backgroundColor}/>);
    });
 
 
