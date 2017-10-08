@@ -12,6 +12,9 @@ body {
     font-family: sans-serif;
 }
 .container {
+    position: absolute;
+    top: 100px;
+    left: 0px;
     display: flex;
     flex-direction: column;
     width: 1920px;
@@ -126,4 +129,11 @@ body {
 }
 .center {
     text-align: center;
+}
+.background {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -10000;
+
 }

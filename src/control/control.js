@@ -14,10 +14,14 @@ export class Control extends Component {
                   }
                   window.open(url)
                 },
-                  background:'#ffffff',
                   width: 1920,
                   height: 1080
             });
+        }
+
+        this.setBackground = () => {
+            const  background = document.getElementsByClassName("background-image-upload")[0];
+            background.click()
         }
     }
 
@@ -25,10 +29,14 @@ export class Control extends Component {
         return (
             <div>
                 <div className="control">
-                <p className="center">
-                    <button className="myButton" onClick={this.generateImage}>Generate Image</button>
-                </p>
+                    <p className="center"><a href="https://github.com/jonathadv/talk-banner-generator" target="_blank">Project on Github</a></p>
+                    <p className="center">Firefox only (for while)</p><br/>
+                    <p className="center">
+                        <button className="myButton" onClick={this.generateImage}>Generate Image</button>
+                        <button className="myButton" onClick={this.setBackground}>Set background</button>
+                    </p>
                 </div>
+                <hr className="line"/>
                 {this.props.children}
             </div>
         );
