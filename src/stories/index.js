@@ -10,9 +10,9 @@ import { Generator }  from '../generator/generator';
 setOptions({ downPanelInRight: true, showLeftPanel: false });
 
 
-storiesOf('Talk Banner', module)
+storiesOf('Talk Poster', module)
   .addDecorator(withKnobs)
-  .add('Banner Generator', () => {
+  .add('Poster Generator', () => {
         const title = text("Talk Title", "");;
         const titleColor = color('Title Color', '#000000');
 
