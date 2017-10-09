@@ -32,8 +32,8 @@ export class Control extends Component {
                     <p className="center"><a href="https://github.com/jonathadv/talk-poster-generator" target="_blank">Project on Github</a></p>
                     <p className="center">Firefox only (for while)</p><br/>
                     <p className="center">
-                        <button className="myButton" onClick={this.generateImage}>Generate Image</button>
-                        <button className="myButton" onClick={this.setBackground}>Set background</button>
+                        <button className="myButton" onClick={this.generateImage}>Generate Poster</button>
+                        <button className="myButton" onClick={this.setBackground}>Upload Background</button>
                     </p>
                 </div>
                 <hr className="line"/>
