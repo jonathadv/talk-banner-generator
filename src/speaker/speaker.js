@@ -11,11 +11,21 @@ export class Speaker extends Component {
     }
 
   render() {
+    const {
+        bioColor, isMultiple, bio
+    } = this.props;
+
+    const styles = {"color" : bioColor}
+    const speakerStyle = {}
+    if (isMultiple) {
+        speakerStyle['max-width'] = '50%';
+    }
+
     return (
-      <div className="speaker">
+      <div className="speaker" style={speakerStyle}>
         <ImageUpload/>
-        <div className="speaker-bio" style={{"color" : this.props.bioColor}}>
-            {this.props.bio ? this.props.bio : this.state.bio}
+        <div className="speaker-bio" style={styles}>
+            {bio ? bio : this.state.bio}
         </div>
       </div>
     );

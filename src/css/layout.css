@@ -69,13 +69,17 @@ body {
     display: inline-block;
     text-align: justify;
     padding-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .speaker {
     display: flex;
     padding: 10px;
+    flex-grow: 1;
 }
 .speaker-list {
     display: flex;
+    flex-wrap: wrap;
     margin: 0px -10px;
     padding-top: 10px
 }

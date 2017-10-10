@@ -10,11 +10,16 @@ export class Generator extends Component {
     constructor(props) {
         super(props);
         this.getSpeakers = () => {
-            let speakers = [];
-            speakers = this.props.speakers.map(
-                    (s) => <Speaker id={s.name} picture={s.picture} bio={s.bio}></Speaker>
+            const {
+                speakers,
+            } = this.props;
+
+            const isMultiple = speakers.length == 2;
+
+            const speakersComponent = speakers.map(
+                    (s) => <Speaker id={s.name} picture={s.picture} bio={s.bio} isMultiple={isMultiple}></Speaker>
                     )
-            return (<div style={{"color": this.props.descriptionColor}}>{speakers}</div>);
+            return (<div className="speaker-list" style={{"color": this.props.descriptionColor}}>{speakersComponent}</div>);
         }
     }
 
