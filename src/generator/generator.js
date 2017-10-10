@@ -33,7 +33,7 @@ export class Generator extends Component {
                 <Control print="talk">
                     <Event name="talk"
                            bgColor={this.props.bgColor}
-                           title={this.props.title}
+                           title={this.props.title ? this.props.title : undefined}
                            titleColor={this.props.titleColor}
                            description={this.props.description}
                            descriptionColor={this.props.descriptionColor}>
