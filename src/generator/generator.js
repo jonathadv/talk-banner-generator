@@ -17,8 +17,12 @@ export class Generator extends Component {
             const isMultiple = speakers.length == 2;
 
             const speakersComponent = speakers.map(
-                    (s) => <Speaker id={s.name} picture={s.picture} bio={s.bio} isMultiple={isMultiple}></Speaker>
-                    )
+                        (s) => <Speaker id={s.name}
+                                        picture={s.picture}
+                                        bio={s.bio ? s.bio : undefined}
+                                        isMultiple={isMultiple}>
+                               </Speaker>)
+
             return (<div className="speaker-list" style={{"color": this.props.descriptionColor}}>{speakersComponent}</div>);
         }
     }
