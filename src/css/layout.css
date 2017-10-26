@@ -51,8 +51,11 @@ body {
 }
 .event-title {
     font-size: 6rem;
+    padding-bottom: 30px;
+    word-wrap: break-word;
     text-align: center;
-    padding-bottom: 30px
+    padding-bottom: 30px;
+    width: 70%;
 }
 .event-description {
     font-size: 3rem;

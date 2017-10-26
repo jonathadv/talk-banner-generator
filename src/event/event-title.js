@@ -15,9 +15,9 @@ export class EventTitle extends Component {
         const style = {"color": color}
 
     return (
-        <p className="event-title" style={style}>
+        <h1 className="event-title" style={style}>
             {value}
-        </p>
+        </h1>
     );
   }
 }
